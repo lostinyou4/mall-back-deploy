@@ -16,9 +16,10 @@ app.use((req, res, next) => {
 })
 
 app.use(cors({
-    origin: '*',
+    origin: 'http://localhost:3000/',
     method: ['GET', 'POST', 'DELETE', 'PUT'],
-    credentials: true
+    credentials: true,
+    optionsSuccessStatus: 200
 }))
 
 app.use(express.urlencoded({extended:false}))
