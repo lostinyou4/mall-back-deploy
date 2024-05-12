@@ -5,7 +5,7 @@ const main = (req, res) => {
     res.send('<h1>Welcome, 제발 돼라</h1>')
 }
 
-const test = async () => {
+const test = async (req, res) => {
     const products = await Product.find()
     console.log(products)
     res.json(products)
